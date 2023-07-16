@@ -1,0 +1,113 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    transition: 0.4s;
+    border-radius: 34px;
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+    &:before {
+        transform: translateX(26px);
+    }
+}
+
+.dark-theme {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #333;
+
+    button {
+        background-color: #333;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+    p {
+        color: #333;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    a.button.button--cart {
+        background-color: #333;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    div.categories {
+        ul {
+            li {
+                background: black;
+                color: #fff;
+            }
+        }
+    }
+
+    div.pizza-block__selector {
+        background-color: #333;
+        color: #fff;
+        ul {
+            li {
+                &.active {
+                    background-color: orange;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    div.pizza-block__price {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: white;
+    }
+
+    ul {
+        font-size: large;
+        li {
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #333;
+}
